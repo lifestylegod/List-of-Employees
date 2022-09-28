@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sample Output</title>
+
+</head>
+<body>
+	<style type="text/css">
+		body {
+  display:flex; flex-direction:column; justify-content:center;
+  min-height:10vh;
+}
+h2 {
+	text-align: center;
+}
+	</style>
+
+<h2>Employee Lists</h2>
+<input type="text" name="" id = "demo1"> <br>
+<br>
+<input type="text" name="" id = "demo2"> <br>
+<br>
+<button type = "submit" id = "demo3">Submit</button>
+<p id = "test12"></p>
+
+<script type="text/javascript">
+	let input1 = document.querySelector("#demo1");
+	let input2 = document.querySelector("#demo2");
+	let btn = document.querySelector("#demo3");
+	const output = new Map();
+	btn.addEventListener("click", () =>{
+		inputVal1 = input1.value;
+		inputVal2 = input2.value;
+		output.set("Moses", "Administrator");
+      	output.set("Oke", "ChiefDev");
+      	output.set(inputVal1, inputVal2);
+      	let text = "";
+output.forEach (function(value, key) {
+  text += key + ':' + value + "<br>"; 
+})
+
+document.getElementById("test12").innerHTML = text;
+		
+	})
+</script>
+</body>
+</html>
